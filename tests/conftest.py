@@ -4,7 +4,7 @@ from selenium import webdriver
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", help="what browser to use")
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def driver(request):
     browser_type = request.config.getoption('--browser')
     if browser_type == "Firefox" or browser_type == "firefox":
@@ -16,5 +16,5 @@ def driver(request):
     
     yield driver
 
-    driver.close()
+    driver.quit()
     

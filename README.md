@@ -8,15 +8,15 @@ A test suite example
 - Google chrome and matching [chromedriver installed to PATH](https://sites.google.com/a/chromium.org/chromedriver/downloads)
  
 ## Running the test suite
-To run the full test suite:
-> python3 -m pytest test/ --browser Chrome
+To run the full test suite, from the root folder:
+> python3 -m pytest tests/ --browser Chrome
 
 To run a specific file:
-> python3 -m pytest test/test_registration.py --browser Chrome \
+> python3 -m pytest tests/test_registration.py --browser Chrome \
 > OR \
-> python3 -m pytest test/test_webtables.py --browser Chrome
+> python3 -m pytest tests/test_webtables.py --browser Chrome
 
 To run a specific test:
-> python3 -m pytest test/test_registration.py --browser Chrome -k 'test_registration_valid' \
+> python3 -m pytest tests/test_registration.py --browser Chrome -k 'test_registration_valid' \
 > OR \
-> python3 -m pytest test/test_registration.py --browser Chrome -k 'test_registration_invalid' 
+> python3 -m pytest tests/test_registration.py --browser Chrome -k 'test_registration_invalid' 
